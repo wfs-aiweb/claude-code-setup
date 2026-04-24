@@ -1,0 +1,13 @@
+# 機密ファイル - Claude Codeから完全に隠す
+# このファイルをプロジェクトのルートに置くと、
+# Claude Codeが下記ファイルを物理的に読めなくなります。
+
+.env
+.env.local
+.env.production
+.env.development
+.env.development.local
+.env.production.local
+.env*.local
+*.pem
+*.key
