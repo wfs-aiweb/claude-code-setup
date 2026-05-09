@@ -2,12 +2,61 @@
 # このファイルをプロジェクトのルートに置くと、
 # Claude Codeが下記ファイルを物理的に読めなくなります。
 
+# 環境変数・シークレット
 .env
 .env.local
 .env.production
 .env.development
 .env.development.local
 .env.production.local
+.env.test
+.env.test.local
 .env*.local
+.env.*
+
+# 鍵・証明書
 *.pem
 *.key
+*.p12
+*.pfx
+*.crt
+*.cer
+id_rsa
+id_ed25519
+*.ppk
+
+# Claude Code 設定（APIキーを含む）
+.claude/settings.json
+.claude/settings.local.json
+
+# 認証情報
+.netrc
+.htpasswd
+credentials.json
+token.json
+auth.json
+secrets.json
+secret.json
+*_credentials.json
+*_secret.json
+
+# クラウドサービス
+.aws/credentials
+.aws/config
+gcloud/credentials.db
+firebase-adminsdk*.json
+service-account*.json
+serviceAccount*.json
+
+# パスワードマネージャー・キーチェーン
+*.kdbx
+*.1pux
+
+# ローカル DB
+*.sqlite
+*.sqlite3
+*.db
+
+# ログ（個人情報含む可能性）
+*.log
+logs/
