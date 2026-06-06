@@ -1,0 +1,48 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./**/.env)",
+      "Read(./**/.env.*)",
+
+      "Read(./**/*.pem)",
+      "Read(./**/*.key)",
+      "Read(./**/*.p12)",
+      "Read(./**/*.pfx)",
+      "Read(./**/*.crt)",
+      "Read(./**/*.cer)",
+      "Read(./**/id_rsa)",
+      "Read(./**/id_ed25519)",
+      "Read(./**/*.ppk)",
+
+      "Read(./.claude/settings.json)",
+      "Read(./.claude/settings.local.json)",
+
+      "Read(./**/.netrc)",
+      "Read(./**/.htpasswd)",
+      "Read(./**/credentials.json)",
+      "Read(./**/token.json)",
+      "Read(./**/auth.json)",
+      "Read(./**/secrets.json)",
+      "Read(./**/secret.json)",
+      "Read(./**/*_credentials.json)",
+      "Read(./**/*_secret.json)",
+
+      "Read(./**/.aws/credentials)",
+      "Read(./**/.aws/config)",
+      "Read(./**/firebase-adminsdk*.json)",
+      "Read(./**/service-account*.json)",
+      "Read(./**/serviceAccount*.json)",
+
+      "Read(./**/*.kdbx)",
+      "Read(./**/*.1pux)",
+
+      "Read(./**/*.sqlite)",
+      "Read(./**/*.sqlite3)",
+      "Read(./**/*.db)",
+
+      "Read(./**/*.log)"
+    ]
+  }
+}

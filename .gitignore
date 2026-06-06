@@ -1,0 +1,7 @@
+# 個人ごとのローカル設定（APIキーを含むことがある）
+.claude/settings.local.json
+
+# 環境変数・シークレット
+.env
+.env.local
+.env*.local
