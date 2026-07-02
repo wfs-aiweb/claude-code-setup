@@ -1,18 +1,25 @@
-# 機密ファイル - Claude Codeから完全に隠す
-# このファイルをプロジェクトのルートに置くと、
-# Claude Codeが下記ファイルを物理的に読めなくなります。
+# 機密ファイル一覧（補助メモ）
+# 注意：.claudeignore は Claude Code の公式機能ではないため、
+# このファイル単体では保護になりません。
+# 実際の読み取りブロックは .claude/settings.json の permissions.deny が担います。
+# このファイルは「何を守っているか」の一覧として残しています。
 
-# 環境変数・シークレット
+# 環境変数・シークレット（実キーを入れてよいのは下記の標準名のみ）
+# ※ .env.example / .env.sample（値が空のサンプル）は意図的に含めていません
 .env
 .env.local
-.env.production
 .env.development
-.env.development.local
-.env.production.local
+.env.production
+.env.staging
 .env.test
-.env.test.local
-.env*.local
-.env.*
+.env.dev
+.env.prod
+.env.*.local
+.env.bak
+.env.backup
+.env.old
+.env.secret
+.env.keys
 
 # 鍵・証明書
 *.pem
@@ -25,8 +32,7 @@ id_rsa
 id_ed25519
 *.ppk
 
-# Claude Code 設定（APIキーを含む）
-.claude/settings.json
+# Claude Code 個人設定（APIキーを含むことがある）
 .claude/settings.local.json
 
 # 認証情報

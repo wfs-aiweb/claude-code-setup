@@ -8,11 +8,11 @@ w.f&s（池田宜史）がClaude Code導入時に使うセキュリティ設定�
 |---|---|
 | `.claude/settings.json` | `.env`等の機密ファイルの読み取りを拒否（ハードブロック）＋公式の脆弱性チェックを有効化 |
 | `CLAUDE.md` | Claude Codeへの行動ルール指示。プロジェクト名を変えて使う |
-| `.claudeignore` | 文脈・検索から機密ファイルを除外する補助設定 |
+| `.claudeignore` | 守っている機密ファイルの一覧メモ（公式機能ではないため補助。実際の保護はsettings.json） |
 
 ## 使い方
 
-クライアントのプロジェクトルートに2ファイルをコピーするだけです。
+クライアントのプロジェクトルートに3点をコピーするだけです。
 
 ```bash
 # このリポジトリをダウンロード
@@ -25,6 +25,12 @@ cp    claude-code-setup/.claudeignore your-project/
 ```
 
 その後、`CLAUDE.md` の `[プロジェクト名]` をクライアントのプロジェクト名に書き換えてください。
+
+## 環境変数ファイルのルール（重要）
+
+- 読み取りブロックは**ファイル名の列挙式**です。`.env.example`（値が空のサンプル）はClaude Codeが読める設計にしています（変数名の一覧を伝えるのに便利なため）
+- そのため **`.env.example` / `.env.sample` に本物の値を絶対に入れない**こと
+- 本物のキーを入れるファイル名は `.env` `.env.local` `.env.development` `.env.production` `.env.staging` `.env.test`（＋`.env.*.local`）のみ使うこと。**独自名（`.env.hoge` など）はブロック対象外になるため作らない**
 
 ## コード脆弱性の自動チェック（Security Guidance）
 
