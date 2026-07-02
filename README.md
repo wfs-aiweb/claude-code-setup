@@ -8,11 +8,10 @@ w.f&s（池田宜史）がClaude Code導入時に使うセキュリティ設定�
 |---|---|
 | `.claude/settings.json` | `.env`等の機密ファイルの読み取りを拒否（ハードブロック）＋公式の脆弱性チェックを有効化 |
 | `CLAUDE.md` | Claude Codeへの行動ルール指示。プロジェクト名を変えて使う |
-| `.claudeignore` | 守っている機密ファイルの一覧メモ（公式機能ではないため補助。実際の保護はsettings.json） |
 
 ## 使い方
 
-クライアントのプロジェクトルートに3点をコピーするだけです。
+クライアントのプロジェクトルートに2点をコピーするだけです。
 
 ```bash
 # このリポジトリをダウンロード
@@ -21,7 +20,6 @@ git clone https://github.com/wfs-aiweb/claude-code-setup
 # ファイルをプロジェクトにコピー（.claude フォルダごと）
 cp -r claude-code-setup/.claude     your-project/
 cp    claude-code-setup/CLAUDE.md   your-project/
-cp    claude-code-setup/.claudeignore your-project/
 ```
 
 その後、`CLAUDE.md` の `[プロジェクト名]` をクライアントのプロジェクト名に書き換えてください。
